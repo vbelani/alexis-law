@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap');
+
+/* Custom properties/variables  */
+:root {
+  --main-white: #ffffff;
+  --main-grey: #dee1e6;
+  --main-blue: #5b667f;
+  --header-blue: #1e2335;
+  --header-shadow-black: rgba(0, 0, 0, 0.4);
+  --border-bar-size: .15em;
+  --link-horizontal-padding
+}
+
+
+/* set box-size, border/margin/padding, and font*/
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* set html font size to percentage for baseline rem calculations*/
+html {
+  font-size: 50%;
+  line-height: 2;
+}
+
+/* nav bar background and layout settings*/
+header {
+  background-color: var(--header-blue);
+  box-shadow: 0 .4rem .4rem var(--header-shadow-black);
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* ensure header nav stays on top of page */
+  z-index: 9999;
+}
+
+/* layout settings for nav links in mobile: centered and justified*/
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* set flex-box for body screens and line height*/
+body {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/*  */
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+/* font size for welcome screen heading */
+h1 {
+  font-size: 6rem;
+}
+
+/* font size for welcome screen subtitle */
+h2, h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+/*font size for body text including forms*/
+.body-text-font-size {
+  font-size: 2rem;
+}
+
+/* font style for section headings */
+h1,
+h3,
+#header-logo {
+  font-family: Merriweather, sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* style bars above and below headers and nav links */
+h1::before,
+h1::after,
+h3::before,
+h3::after,
+.link-animation::before,
+.link-animation::after,
+#header-logo::before,
+#header-logo::after {
+  content: "";
+  top: calc(100% - var(--border-bar-size));
+  left: 0;
+	width: 100%;
+  height: var(--border-bar-size);
+  background: currentColor;
+  position: absolute;
+  z-index: -1;
+}
+
+h1::after,
+h3::after,
+#header-logo::after {
+  top: 0%;
+}
+
+/* bold text for nav bar (font and padding set elsewhere)*/
+.bold-text {
+  font-weight: bold;
+}
+
+/* oval background on header-logo */
+#header-logo-background {
+  margin-left: 2rem;
+  padding: .5rem 2rem;
+  background-color: var(--main-white);
+  border-radius: 2rem;
+}
+
+/* Remove on mobile settings*/
+.desktop-only {
+  display: none;
+}
+
+/* navigation link color, margin, and padding */
+.nav-link {
+  padding: 0 .5rem;
+  text-decoration: none;
+  color: var(--main-white);
+  position: relative;
+  margin: 0 .5rem;
+  font-size: 1.5rem;
+}
+
+/*welcome background image and overlay*/
+#welcome-background-image {
+  background-image: url(https://ik.imagekit.io/vbelani/Background_A4L4C3xVc.jpg);
+  background-size: cover;
+}
+
+#welcome-background-overlay {
+  background-color: rgba(65, 76, 104, .9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* welcome screen link color, margin, and padding */
+#welcome-contact-link {
+  color: var(--main-white);
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+/* START LINK EFFECT: top border slides up */
+
+.link-animation::before,
+.link-animation::after {
+  -webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: scale(0.775);
+	-moz-transform: scale(0.775);
+	transform: scale(0.775);
+}
+
+#welcome-contact-link::before,
+#welcome-contact-link::after {
+  -webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+#welcome-contact-link:hover::before,
+#welcome-contact-link:hover::after,
+#welcome-contact-link:focus::before,
+#welcome-contact-link:focus::after {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+}
+
+.link-animation::after {
+	opacity: 0;
+	-webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+	transition: top 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.link-animation:hover::before,
+.link-animation:hover::after,
+.link-animation:focus::before,
+.link-animation:focus::after {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+}
+
+.link-animation:hover::after,
+.link-animation:focus::after {
+	top: 0%;
+	opacity: 1;
+}
+
+/* END LINK EFFECT */
+
+/* container layout*/
+
+.container {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+/* Alternate container colours blue and light-grey*/
+.container:nth-of-type(2n+3) {
+  background-color: var(--main-blue);
+  color: var(--main-grey);
+}
+
+.container:nth-of-type(even) {
+  background-color: var(--main-grey);
+}
+
+.white-font {
+  color: var(--main-white);
+}
+
+.nav-anchor {
+/* 
+to resolve nav headbutting content
+see here for details:
+http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-D
+  */
+  border-top: 6rem solid transparent;
+  margin-top: -6rem;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+#contact-form {
+  width: 100%;
+}
+
+.form-control fieldset,
+legend {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 100%
+}
+
+.form-control label {
+  display: inline-block;
+  width: 100%;
+}
+
+.form-control input, textarea {
+  width: 100%;
+}
+
+
+/* TODO: FIX UP FONT SIZES*/
+.form-control input,
+.form-control textarea,
+.form-control submit {
+  border: 0.1rem solid #777;
+  border-radius: 0.2rem;
+  font-family: inherit;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  display: block;
+}
+
+.welcome-text {
+  margin: 1rem 0;
+}
+
+.body-image,
+.service-box {
+  flex: 0;
+  width: 100%;
+  border: 1rem solid;
+  border-color: var(--header-blue);
+  display: block;
+}
+
+.body-text-spacing p, h4, h5 {
+  padding: 1rem;
+  width: 100%
+}
+
+.container-body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  width: 100%;
+}
+
+.services-column {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  width: 100%;
+}
+
+.service-box {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+/* Laptop screens */
+
+@media only screen and (min-width: 50em) {
+  
+  html {
+    font-size: 62.5%
+  }
+  
+  .desktop-only {
+    display: initial;
+  }
+  
+  .mobile-only {
+    display: none;
+  }
+  
+  /* layout settings for nav links in mobile: centered and justified*/
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 2rem;
+    width: initial;
+  }
+  
+  .body-text-font-size {
+    font-size: 1.5rem;
+  }
+  
+  .body-text-spacing p, h4, h5 {
+    padding: 1rem;
+  }
+  
+  .two-column-desktop-only{
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+  
+  .services-column {
+    width: 32rem;
+  }
+  
+  .service-box {
+    min-height: 32rem;
+  }
+  
+  /* navigation link color, margin, and padding */
+  .nav-link {
+    padding: 0 1rem;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .container-body {
+    width: 65%;
+  }
+  
+  .body-image {
+    max-width: 45rem;
+  }
+
+}
