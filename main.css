@@ -387,12 +387,11 @@ legend {
   }
   
   .services-column {
-    width: 30rem;
-    max-width: 30rem;
+    width: 24rem;
   }
   
   .service-box {
-    min-height: 30rem;
+    min-height: 24rem;
   }
   
   /* navigation link color, margin, and padding */
@@ -403,7 +402,7 @@ legend {
   }
   
   .container-body {
-    width: 65%;
+    width: 75%;
   }
   
   .body-image {
