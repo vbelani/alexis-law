@@ -136,7 +136,7 @@
     <h3 id="request-consult-heading" class="container-heading mobile-only">REQUEST A CONSULT</h3>
     <div class="container-body body-text-font-size body-item-width">
       <div id="contact-form">
-        <form action="https://formsubmit.co/el/vugera" method="POST" id="form" autocomplete="on" target="_blank" name="email-form">
+        <form action="https://formsubmit.co/el/vugera" method="POST" id="form" autocomplete="on">
           <div class="form-control">
             <label for="name" id="name-label">Name *</label>
             <input type="name" id="name" placeholder="Enter Full Name" name="name" required>
@@ -148,17 +148,17 @@
           </div>
 
           <div class="form-control">
-            <label for="tel" id="tel-label">Telephone</label>
-            <input type="tel" id="tel" placeholder="Enter Phone #" name="tel">
+            <label for="subject" id="subject-label">Subject</label>
+            <input type="text" id="subject" placeholder="Subject" name="subject">
           </div>
 
           <div class="form-control">
             <label for="message" id="message-label">Message *</label>
-            <textarea name="message" id="textarea" placeholder="Enter comments here"></textarea>
+            <textarea name="message" id="textarea" placeholder="Disclaimer: Confidential or time-sensitive information should not be sent through this form. The use of the internet or this form for communication with the firm or any individual member of the firm does not establish an lawyer-client relationship. By submitting this form you agree to the above disclaimer."></textarea>
           </div>
 
           <div class="form-control">
-            <input type="submit" id="submit">
+            <button type="submit" id="submit" class="submit">Submit Form</button>
           </div>
 
         </form>

@@ -284,21 +284,18 @@ legend {
   width: 100%;
 }
 
-.form-control input, textarea {
-  width: 100%;
-}
-
-
 /* TODO: FIX UP FONT SIZES*/
 .form-control input,
 .form-control textarea,
-.form-control submit {
+.form-control button {
   border: 0.1rem solid #777;
   border-radius: 0.2rem;
   font-family: inherit;
+  font-size: 1.5rem;
   padding: 1rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   display: block;
+  width: 100%;
 }
 
 .welcome-text {
