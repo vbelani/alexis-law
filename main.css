@@ -8,7 +8,6 @@
   --header-blue: #1e2335;
   --header-shadow-black: rgba(0, 0, 0, 0.4);
   --border-bar-size: .15em;
-  --link-horizontal-padding
 }
 
 
@@ -149,7 +148,7 @@ h3::after,
 
 /*welcome background image and overlay*/
 #welcome-background-image {
-  background-image: url(https://ik.imagekit.io/vbelani/Background_A4L4C3xVc.jpg);
+  background-image: url(..\images\welcome-splash-mountain-background.jpg);
   background-size: cover;
 }
 
