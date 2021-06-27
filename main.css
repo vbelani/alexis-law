@@ -148,7 +148,7 @@ h3::after,
 
 /*welcome background image and overlay*/
 #welcome-background-image {
-  background-image: url(images\welcome-splash-mountain-background.jpg);
+  background-image: url(images/welcome-splash-mountain-background.jpg);
   background-size: cover;
 }
 
