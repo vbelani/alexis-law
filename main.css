@@ -8,7 +8,6 @@
   --header-blue: #1e2335;
   --header-shadow-black: rgba(0, 0, 0, 0.4);
   --border-bar-size: .15em;
-  --link-horizontal-padding
 }
 
 
@@ -149,7 +148,7 @@ h3::after,
 
 /*welcome background image and overlay*/
 #welcome-background-image {
-  background-image: url(https://ik.imagekit.io/vbelani/Background_A4L4C3xVc.jpg);
+  background-image: url(images/welcome-splash-mountain-background.jpg);
   background-size: cover;
 }
 
@@ -285,21 +284,18 @@ legend {
   width: 100%;
 }
 
-.form-control input, textarea {
-  width: 100%;
-}
-
-
 /* TODO: FIX UP FONT SIZES*/
 .form-control input,
 .form-control textarea,
-.form-control submit {
+.form-control button {
   border: 0.1rem solid #777;
   border-radius: 0.2rem;
   font-family: inherit;
+  font-size: 1.5rem;
   padding: 1rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   display: block;
+  width: 100%;
 }
 
 .welcome-text {
@@ -349,7 +345,7 @@ legend {
 
 /* Laptop screens */
 
-@media only screen and (min-width: 55em) {
+@media only screen and (min-width: 50em) {
   
   html {
     font-size: 62.5%
@@ -387,11 +383,11 @@ legend {
   }
   
   .services-column {
-    width: 32rem;
+    width: 27rem;
   }
   
   .service-box {
-    min-height: 32rem;
+    min-height: 27rem;
   }
   
   /* navigation link color, margin, and padding */
@@ -402,7 +398,7 @@ legend {
   }
   
   .container-body {
-    width: 65%;
+    width: 85%;
   }
   
   .body-image {
