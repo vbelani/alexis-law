@@ -344,6 +344,15 @@ legend {
   margin: 1rem 0;
 }
 
+.map {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  width: 100%;
+}
+
 /* Laptop screens */
 
 @media only screen and (min-width: 50em) {
@@ -404,17 +413,6 @@ legend {
   
   .body-image {
     max-width: 45rem;
-  }
-  
-  /* to allow each container section be minimum full size of the screen*/
-  .container {
-  min-width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem;
   }
 
 }
