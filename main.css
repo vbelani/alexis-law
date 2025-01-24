@@ -351,6 +351,11 @@ legend {
   justify-content: center;
   margin: 1rem;
   width: 100%;
+  min-height: 50vh;
+}
+
+.message {
+  min-height: 25vh;
 }
 
 /* Laptop screens */
